@@ -1,0 +1,5 @@
+pins: [22, 23, 20, 26]
+
+# These are the defaults, not mandatory
+wait_time: 1
+nb_steps: 2048
