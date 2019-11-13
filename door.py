@@ -12,10 +12,12 @@ config = yaml.safe_load(open("config.yaml", 'r'))
 pi = pigpio.pi()
 motor = StepperMotor(pi, *config['pins'], sequence = fullStepSequence)
 
-for i in range(config['nb_steps']):
+nb_steps = config.get('nb_steps', 2048)
+
+for i in range(nb_steps):
     motor.rotateClockwise()
 
-sleep(config['wait_time'])
+sleep(config.get('wait_time', 1))
 
-for i in range(config['nb_steps']):
+for i in range(nb_steps):
     motor.rotateCounterClockwise()
