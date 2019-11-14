@@ -1,3 +1,7 @@
+"""
+This script is copied from https://github.com/stripcode/pigpio-stepper-motor/blob/master/PigpioStepperMotor.py
+Thanks for your help!
+"""
 import pigpio
 from time import sleep
 from collections import deque
